@@ -1,27 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  padding: 1rem 1rem;
+  height: 100%;
+}
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  margin: 0;
+  height: 100%;
+  background: rgb(240, 240, 240);
+  min-width: 290px;
 }
 
-.calculator {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 8px;
-    max-width: 300px;
-    margin: auto;
+button:focus {
+  outline: none;
 }
 
-.display {
-    grid-column: span 4;
-    text-align: right;
-    padding: 10px;
-    font-size: 1.5em;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5%;
 }
 
-button {
-    padding: 10px;
-    font-size: 1em;
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header div h1,
+#results .greeting {
+  margin: 0;
+  margin-left: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+#results .greeting {
+  margin: 0;
+  height: 20%;
+  text-align: center;
+}
+
+.side-nav {
+  width: 1.3rem;
+  height: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.side-nav hr {
+  margin: 0;
+  border-style: solid;
+  border-width: 0.5px;
+  width: 100%;
+}
+
+.history-log {
+  width: 1.3rem;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.history-log img {
+  width: 100%;
+}
+
+#results {
+  height: 30%;
+}
+
+.live-input-display {
+  height: 20%;
+  margin: 0;
+  font: inherit;
+}
+
+.answer-display {
+  height: 60%;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.live-input-display,
+.answer-display {
+  text-align: right;
+  caret-color: transparent;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+#inputs {
+  height: 70%;
+}
+
+.inputs-div {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 3px;
+}
+
+.inputs-div button {
+  border: 2px solid grey;
+  border-radius: 9px; 
+}
+
+.operator-btn {
+  background-color: rgb(218, 218, 218);
+}
+
+.number-btn {
+  background-color: rgb(251, 247, 246);
+}
+
+button:hover {
+  background-color: rgb(240, 240, 240);
+  border-color: rgb(218, 218, 218);
+  border-width: 1.5px;
+  border-style: solid;
+  border-radius: 9px; 
+  border: 2px solid black;
+}
+
+button:active {
+  background-color: rgb(201, 199, 200);
+  border-color: rgb(186, 186, 186);
+  border-width: 1.5px; 
+  border-style: solid;
+  border-radius: 9px; 
+  border: 2px solid black;
+}
+
+#multiply-btn:hover,
+#divide-btn:hover,
+#add-btn:hover,
+#subtract-btn:hover,
+#equals-btn:hover {
+  background-color: rgb(0, 118, 214);
+  border-color: rgb(37, 104, 163);
+  border-width: 1.5px;
+  border-style: solid;
+}
+
+#multiply-btn:active,
+#divide-btn:active,
+#add-btn:active,
+#subtract-btn:active,
+#equals-btn:active {
+  background-color: rgb(176, 220, 255);
+  border-color: rgb(175, 202, 221);
+  border-width: 1.5px;
+  border-style: solid;
+}
+
+
+
+@media (min-width: 780px) {
+  body {
+    margin: 0 auto;
+    max-width: 1010px;
+  }
 }
